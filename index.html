@@ -20,15 +20,15 @@
       bottom: -100%;
       width: 100%;
       text-align: center;
-      animation: scroll-up 150s linear infinite; /* Extra slow scrolling */
+      animation: scroll-up 150s linear infinite;
     }
 
     @keyframes scroll-up {
       0% {
-        bottom: -100%;
+        transform: translateY(100vh);
       }
       100% {
-        bottom: 150%;
+        transform: translateY(-150%);
       }
     }
 
@@ -115,40 +115,38 @@
 <body>
   <div class="card">
     <div class="message">
-      <h1>Happy Birthday! 🎉</h1>
-      <p>So, it was last year when we met. The situation wasn’t exactly the kind you write songs about, but here we are, just a few months away from completing a year of knowing <strong>"4PF."</strong></p>
-      <p>I still don’t know what that stands for, but hey, it’s your signature name, and I respect that.</p>
+      <h1>Happy Birthday! 🎉🎂✨</h1>
+      <p>So, it was last year when we met. The situation wasn’t exactly the kind you write songs about, but here we are, just a few months away from completing a year of knowing <strong>"4PF" 🤔.</strong></p>
+      <p>I still don’t know what that stands for, but hey, it’s your signature name, and I respect that. 🤷‍♀️</p>
 
-      <p>Now, I like to think I’m usually ahead of the game when it comes to knowing people’s birthdays—very prepared, gifts picked out, the whole package—but who really cares, right?</p>
-      <p>Speaking of which, who the heck is born in January? Your parents could have just delayed the boombayay a bit, and boom, you’d be a cool March or April baby. But again, who cares, right?</p>
+      <p>Now, I like to think I’m usually ahead of the game when it comes to knowing people’s birthdays—very prepared, gifts picked out, the whole package—but who really cares, right?😂</p>
+      <p>Speaking of which, who the heck is born in January? ❄️ Your parents could have just delayed the boombayay a bit, and boom, you’d be a cool March or April baby. But again, who cares, right? 🤷‍♂️</p>
 
-      <p>So as you celebrate your one year closer to death (not to be dramatic or smth), I want to wish you a very jolly happy birthday.</p>
+      <p>So as you celebrate your one year closer to death (not to be dramatic or smth), I want to wish you a very jolly happy birthday. 🎈</p>
 
-      <p>I’m a weird girl, and my gifts match the owner, so don’t expect anything normal. I mean, normal is overrated anyway. Maybe I’ll send you a rock I found on the side of the road and call it a "lucky charm" or something equally ridiculous.</p>
+      <p>I’m a weird girl, and my gifts match the owner, so don’t expect anything normal. I mean, normal is overrated anyway. 🤪 Maybe I’ll send you a rock I found on the side of the road and call it a "lucky charm" or something equally ridiculous. 🪨✨</p>
 
-      <p>But hey, it’s the thought that counts, right?</p>
-      <p>In all seriousness, though, it’s been such a wild and funny journey knowing you.</p>
+      <p>But hey, it’s the thought that counts, right? 🥰</p>
+      <p>In all seriousness, though, it’s been such a wild and funny journey knowing you. </p>
 
-      <p>Eat cake like it’s your full-time job, celebrate like the world revolves around you (because today it kinda does), and remember that you’re one-of-a-kind. Don’t let January steal the spotlight—make this day all yours.</p>
+      <p>Eat cake like it’s your full-time job🎈🎈 , celebrate like the world revolves around you (because today it kinda does ), and remember that you’re one-of-a-kind. Don’t let January steal the spotlight—make this day all yours. 🌟🎊</p>
 
-      <p><strong>Happy birthday, you fantastic human!</strong> Here’s to many more laughs, weird jokes, and me outdoing myself next year with an even stranger birthday wish.</p>
+      <p><strong>Happy birthday, you fantastic human! 🎉❤️</strong> Here’s to many more laughs, weird jokes, and me outdoing myself next year with an even stranger birthday wish. 🤭🎁</p>
     </div>
   </div>
 
   <div class="glow"></div>
 
-  <button class="music-control" id="music-toggle">Play Music</button>
+  <button class="music-control" id="music-toggle">Play Music 🎶</button>
 
-  <!-- Background Music -->
   <audio id="background-music" loop>
     <source src="hbd.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
   <script>
-    // Create falling stars
     function createStars() {
-      for (let i = 0; i < 150; i++) { // Increased star count for more vibrancy
+      for (let i = 0; i < 150; i++) {
         const star = document.createElement('div');
         star.className = 'star';
         star.style.left = Math.random() * window.innerWidth + 'px';
@@ -157,21 +155,19 @@
       }
     }
 
-    // Music Control
     const musicToggle = document.getElementById('music-toggle');
     const backgroundMusic = document.getElementById('background-music');
 
     musicToggle.addEventListener('click', () => {
       if (backgroundMusic.paused) {
         backgroundMusic.play();
-        musicToggle.textContent = 'Pause Music';
+        musicToggle.textContent = 'Pause Music ❌';
       } else {
         backgroundMusic.pause();
-        musicToggle.textContent = 'Play Music';
+        musicToggle.textContent = 'Play Music 🎶';
       }
     });
 
-    // Initialize stars on load
     window.onload = createStars;
   </script>
 </body>
